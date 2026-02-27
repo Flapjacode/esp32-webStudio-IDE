@@ -147,22 +147,22 @@ This project is intended solely as an educational tool for teaching and learning
 
 ## Third-Party Attributions
 
-### Espressif Systems
+### Espressif Systems <img src="https://www.espressif.com/sites/all/themes/espressif/images/logo-guidelines/primary-vertical-logo.png" width="200" style="background-color: white;"/>
 
 ESP32 microcontroller platform, architecture, and related trademarks are the intellectual property of Espressif Systems (Shanghai) Co., Ltd.
 
-<img src="https://www.espressif.com/sites/all/themes/espressif/images/logo-guidelines/primary-vertical-logo.png" width="200"/>
+
 
 **Copyright © 2025 Espressif Systems (Shanghai) Co., Ltd. All rights reserved.**
 
 All references to "ESP32," "ESP32-C3," and related Espressif products are used in accordance with Espressif's trademark guidelines for educational and reference purposes.
 
-### Arduino
+### Arduino <img src="https://www.arduino.cc/wiki/7c482b8fdff660243523a8f9127c4ac0/logos.svg" alt="logos" style="background-color: white;"/>
 
 This project utilizes the Arduino programming framework and development paradigm. Arduino is used under the terms of its respective licenses.
 
 **Arduino™ and the Arduino logo are trademarks of Arduino AG.**
-<img src="https://www.arduino.cc/wiki/7c482b8fdff660243523a8f9127c4ac0/logos.svg" alt="logos"/>
+
 
 **Copyright © 2025 Arduino AG. All rights reserved.**
 
