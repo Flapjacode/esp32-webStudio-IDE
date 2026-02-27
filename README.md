@@ -135,35 +135,157 @@ Esp32-Sim-Tool/
 - Modern web browser (Chrome, Firefox, Edge, Safari)
 - Node.js (optional for local development server)
 
-## Sources and Mentions
+## Sources and Attributions
 
-Source code is my personal build of an IDE Web interface and has no derivitives, copies, or other material that is not from my own intellectual meterial encompassing except for credited entities mentioned in disclaimer and source. Please note that this is an educactional tool to teach/learn developement with esp32 microcontroller using Arduino code. 
-   All ESP and mentions are strictly the IP of Espressif Systems and used as basis for the project along side the Arduino programming format of this project.
-   
-   <img src="https://www.espressif.com/sites/all/themes/espressif/images/logo-guidelines/primary-vertical-logo.png"/>
-   Copyright © 2026 Espressif Systems. All rights reserved.
-   <img src="blob:chrome-untrusted://media-app/fb204ede-45a7-4e25-b557-5f5d5fc66981" alt="logos.svg"/>
-   Arduino used as basis along with terms of creative commons liscence. © 2026 Arduino 
+## Intellectual Property Statement
 
-ESP32 Diagrams provided by Xecor: https://www.xecor.com/blog/esp32-pinout-diagram
-COPYRIGHT @ 2026 XECOR CO,.LTD All RIGHTS RESERVED
+The source code contained in this repository represents original work developed as an educational IDE web interface for ESP32 microcontroller development. All code is the intellectual property of the project author except where explicitly attributed to third-party entities as detailed below.
 
-ESP32 C3-Supermini Diagrams by Micro Robotics: https://www.robotics.org.za/ESP32-C3-SMINI-V2
-Micro Robotics © 2026
+## Educational Purpose
+
+This project is intended solely as an educational tool for teaching and learning ESP32 microcontroller development using the Arduino programming framework. It is designed to facilitate understanding of embedded systems programming and hardware interaction.
+
+## Third-Party Attributions
+
+### Espressif Systems
+
+ESP32 microcontroller platform, architecture, and related trademarks are the intellectual property of Espressif Systems (Shanghai) Co., Ltd.
+
+<img src="https://www.espressif.com/sites/all/themes/espressif/images/logo-guidelines/primary-vertical-logo.png" width="200"/>
+
+**Copyright © 2025 Espressif Systems (Shanghai) Co., Ltd. All rights reserved.**
+
+All references to "ESP32," "ESP32-C3," and related Espressif products are used in accordance with Espressif's trademark guidelines for educational and reference purposes.
+
+### Arduino
+
+This project utilizes the Arduino programming framework and development paradigm. Arduino is used under the terms of its respective licenses.
+
+**Arduino™ and the Arduino logo are trademarks of Arduino AG.**
+<img src="https://www.arduino.cc/wiki/7c482b8fdff660243523a8f9127c4ac0/logos.svg" alt="logos"/>
+
+**Copyright © 2025 Arduino AG. All rights reserved.**
+
+The Arduino framework is used in accordance with the GNU Lesser General Public License (LGPL) and Creative Commons licensing terms as applicable.
+
+### Technical Documentation Sources
+
+#### Xecor Electronics
+ESP32 pinout diagrams and technical documentation provided by Xecor Electronics.
+
+**Source:** [Xecor ESP32 Pinout Diagram](https://www.xecor.com/blog/esp32-pinout-diagram)
+
+**Copyright © 2026 Xecor Co., Ltd. All rights reserved.**
+
+Technical diagrams used with attribution for educational reference purposes.
+
+#### Micro Robotics
+ESP32-C3 Super Mini technical specifications and pinout diagrams provided by Micro Robotics.
+
+**Source:** [Micro Robotics ESP32-C3-SMINI Documentation](https://www.robotics.org.za/ESP32-C3-SMINI-V2)
+
+**Copyright © 2026 Micro Robotics (Pty) Ltd. All rights reserved.**
+
+Documentation used with attribution for educational and reference purposes.
+
+---
+
 ## License
 
-MIT License - See LICENSE file for details
+<a href="https://flapjacode.github.io/Esp32-Sim-Tool/">ESP32 IDE SimTool</a> © 2025 by <a href="https://github.com/Flapjacode">Matthew Shannon</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer">Creative Commons Attribution 4.0 International</a> <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt="">
 
-Ensure all code follows the existing style and conventions
+### License Summary
 
-Include appropriate tests for new functionality
+This work is licensed under the Creative Commons Attribution 4.0 International License. 
 
-Update documentation as needed
+**You are free to:**
+- **Share** — copy and redistribute the material in any medium or format
+- **Adapt** — remix, transform, and build upon the material for any purpose, even commercially
 
-Submit a pull request with a clear description of changes
+**Under the following terms:**
+- **Attribution** — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
 
-License
-<a href="https://flapjacode.github.io/Esp32-Sim-Tool/">ESP IDE SimTool</a> © 2025 by <a href="https://github.com/Flapjacode">Matthew Shannon</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+**No additional restrictions** — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
 
-Support
-For issues or feature requests, please open an issue in the GitHub repository. For direct inquiries, contact the project maintainers through GitHub.
+### Full License Text
+
+To view a copy of this license, visit:
+[https://creativecommons.org/licenses/by/4.0/legalcode](https://creativecommons.org/licenses/by/4.0/legalcode)
+
+---
+
+## Disclaimer
+
+### Educational Use
+This software is provided for educational and learning purposes only. The author and contributors make no warranties regarding the fitness of this software for any particular purpose.
+
+### Hardware Interaction
+Users assume all responsibility for the proper and safe operation of hardware when using this software. Always follow proper safety protocols when working with electronic components and embedded systems.
+
+### Third-Party Resources
+While every effort has been made to properly attribute third-party resources, users are responsible for ensuring compliance with all applicable licenses and terms of use for any external resources or libraries they choose to incorporate.
+
+### No Warranty
+THIS SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+---
+
+## Contributing
+
+Contributions to this project are welcome and encouraged. By contributing, you agree that your contributions will be licensed under the same Creative Commons Attribution 4.0 International License that covers this project.
+
+### Contribution Guidelines
+
+When contributing to this repository, please:
+
+1. **Maintain Code Quality**
+   - Ensure all code follows the existing style and conventions
+   - Write clear, well-documented code with appropriate comments
+
+2. **Testing**
+   - Include appropriate tests for new functionality
+   - Verify that existing functionality is not broken
+
+3. **Documentation**
+   - Update documentation to reflect any changes or new features
+   - Include usage examples where applicable
+
+4. **Attribution**
+   - Properly attribute any third-party code or resources
+   - Include appropriate copyright notices
+
+5. **Pull Requests**
+   - Submit pull requests with clear, descriptive titles
+   - Provide detailed descriptions of changes and their purpose
+   - Reference any related issues
+
+---
+
+## Support and Contact
+
+### Issue Reporting
+For bug reports, feature requests, or technical issues, please open an issue in the [GitHub repository](https://github.com/Flapjacode/esp32-simulator/issues).
+
+When reporting issues, please include:
+- A clear description of the problem
+- Steps to reproduce the issue
+- Expected vs. actual behavior
+- System information and environment details
+- Relevant code snippets or error messages
+
+### Community Support
+- **GitHub Discussions:** For general questions and community interaction
+- **Issue Tracker:** For bug reports and feature requests
+
+### Project Maintainer
+For direct inquiries regarding licensing, collaboration, or other matters, contact the project maintainer through the [GitHub profile](https://github.com/Flapjacode).
+
+---
+
+## Acknowledgments
+
+Special thanks to the open-source community and all contributors who have helped make this educational tool possible. This project stands on the shoulders of the Arduino community, Espressif Systems' excellent documentation, and the countless educators and developers who share their knowledge freely.
+
+---
+
+**Last Updated:** February 2026
