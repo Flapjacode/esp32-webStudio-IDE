@@ -6,7 +6,7 @@ This web application provides an interactive interface for configuring ESP-32 mi
 ## Key Features
 Visual Pin Selection Interface: Interactive representation of all ESP-32 pins with clear labeling
 
-Pin Configuration System:
+#  Pin/Board Configuration System:
 
 <br><img width="491" height="550" alt="image" src="https://github.com/user-attachments/assets/2100f568-fa3c-4fe8-9ee8-1ecfa73e0bff" />
 
