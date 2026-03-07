@@ -44,6 +44,7 @@ Syntax checking
 Pin usage verification Common ESP32 function detection Validation of pin assignments for conflicts Integrated Development Environment Built-in terminal for immediate feedback Code validation before deployment Support for common ESP-IDF and Arduino frameworks
 
 Supported Boards
+<br>
 🔷 ESP32 WROOM (DevKit)
 The original ESP32 development board 38 GPIO pins Touch sensors 2 DAC outputs 18 ADC inputs
 
