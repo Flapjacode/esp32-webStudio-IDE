@@ -1,12 +1,60 @@
 # Esp32-Development-Sim-Tool
 
 ## Project Overview
-This web application provides an interactive interface for configuring ESP-32 microcontroller pins. The tool assists developers in properly setting up their ESP-32 projects by generating boilerplate code based on their pin configuration selections.
+
+A web-based ESP32 pin configuration tool that allows developers to:
+- Visually configure ESP32 pins with different modes (GPIO, I2C, SPI, UART)
+- Generate Arduino-compatible code templates
+- Validate code syntax before deployment
+- Test configurations without physical hardware
+
+## Features
+
+- **Interactive Pin Configuration**:
+  - Visual representation of ESP32 pins
+  - Pin-specific configuration options
+  - Custom variable naming and descriptions
+
+- **Code Generation**:
+  - Automatic template generation
+  - Setup/Loop structure
+  - Pin mode initialization
+
+- **Code Validation**:
+  - Syntax checking
+  - Pin usage verification
+  - Common ESP32 function detection
 
 # Key Features
 Visual Pin Selection Interface: Interactive representation of all ESP-32 pins with clear labeling
 
 #  Pin/Board Configuration System:
+
+ey Features
+Visual Pin Selection Interface Interactive representation of all ESP32 pins with clear labeling
+
+Pin Configuration System
+Select from multiple functions (GPIO, I2C, SPI, UART, etc.)
+Configure pin modes (digital input/output, analog, etc.) Add custom names and descriptions for each pin Code Generation
+
+Automatic generation of initialization code for individual pins
+Complete setup function template for all configured pins Board-specific code generation for ESP32 WROOM, S3, C3 variants Code Validation
+
+Syntax checking
+Pin usage verification Common ESP32 function detection Validation of pin assignments for conflicts Integrated Development Environment Built-in terminal for immediate feedback Code validation before deployment Support for common ESP-IDF and Arduino frameworks
+
+Supported Boards
+🔷 ESP32 WROOM (DevKit)
+The original ESP32 development board 38 GPIO pins Touch sensors 2 DAC outputs 18 ADC inputs
+
+🔷 ESP32-S3
+Latest generation with enhanced features 48 GPIO pins Built-in USB support RGB LED (GPIO 48) Higher performance RISC-V core
+
+🔷 ESP32-C3 (DevKit)
+Compact RISC-V based board 22 GPIO pins USB Serial/JTAG built-in Smaller footprint Cost-effective option
+
+🔷 ESP32-C3 Super Mini
+Ultra-compact development board Pre-configured pin labels Perfect for portable projects Built-in LED (GPIO 8) Boot button (GPIO 9)
 
 <br><img width="491" height="550" alt="image" src="https://github.com/user-attachments/assets/2100f568-fa3c-4fe8-9ee8-1ecfa73e0bff" />
 
@@ -36,38 +84,6 @@ Built-in terminal for immediate feedback
 Code validation before deployment
 
 Support for common ESP-IDF and Arduino frameworks
-
-
-
-
-
-
-# ESP32 Pin Configuration Simulator
-
-## Project Overview
-
-A web-based ESP32 pin configuration tool that allows developers to:
-- Visually configure ESP32 pins with different modes (GPIO, I2C, SPI, UART)
-- Generate Arduino-compatible code templates
-- Validate code syntax before deployment
-- Test configurations without physical hardware
-
-## Features
-
-- **Interactive Pin Configuration**:
-  - Visual representation of ESP32 pins
-  - Pin-specific configuration options
-  - Custom variable naming and descriptions
-
-- **Code Generation**:
-  - Automatic template generation
-  - Setup/Loop structure
-  - Pin mode initialization
-
-- **Code Validation**:
-  - Syntax checking
-  - Pin usage verification
-  - Common ESP32 function detection
 
 ## Installation
 
@@ -310,3 +326,23 @@ Special thanks to the open-source community and all contributors who have helped
 ---
 
 **Last Updated:** February 2026
+
+
+Installation
+Web Version (No Installation Required)
+The application runs directly in modern browsers: Open index.html in your preferred browser Select your ESP32 board type from the dropdown Start configuring your pins
+
+Development Setup
+Clone the repository: git clone https://github.com/Flapjacode/Esp32-Sim-Tool.git cd Esp32-Sim-Tool Install dependencies (if using Node.js server): npm install Start the development server: npm start Open in browser: http://localhost:3000 Usage
+
+Select Board Type Choose your ESP32 board variant from the dropdown menu at the top of the interface
+Configure Pins Click on any ESP32 pin to select it Choose the appropriate mode from the dropdown Assign a variable name and description
+Generate Code Click "Generate Template" to create starter code The editor will populate with properly configured pin setups Code is board-specific and optimized for your selected board
+Validate Code Click "Validate Code" to check for common errors The output panel will show validation results Fix any errors before deploying to hardware
+Export Code Copy the generated code directly from the editor Paste into your Arduino IDE or PlatformIO project Upload to your ESP32 board Pinout References
+ESP32-C3 Super Mini � Load image ESP32 WROOM � Load image Project Structure Esp32-Sim-Tool/ ├── index.html # Main application file ├── esp32-ide.js # Core JavaScript logic ├── README.md # Project documentation ├── LICENSE # Creative Commons License ├── images/ # Logo and pinout images │ ├── espressif-logo.png │ ├── arduino-logo.png │ ├── esp32-c3-pinout.png │ └── esp32-wroom-pinout.png ├── assets/ # Static assets │ ├── styles.css # Additional styles │ └── scripts.js # Additional JavaScript └── docs/ # Additional documentation Dependencies Modern web browser (Chrome, Firefox, Edge, Safari) Node.js (optional for local development server) No external libraries required for core functionality Sources and Attributions Intellectual Property Statement The source code contained in this repository represents original work developed as an educational IDE web interface for ESP32 microcontroller development. All code is the intellectual property of the project author except where explicitly attributed to third-party entities as detailed below. Educational Purpose This project is intended solely as an educational tool for teaching and learning ESP32 microcontroller development using the Arduino programming framework. It is designed to facilitate understanding of embedded systems programming and hardware interaction. Third-Party Attributions Espressif Systems � ￼
+
+ESP32 microcontroller platform, architecture, and related trademarks are the intellectual property of Espressif Systems (Shanghai) Co., Ltd. Copyright © 2026 Espressif Systems (Shanghai) Co., Ltd. All rights reserved. All references to "ESP32," "ESP32-C3," "ESP32-S3," and related Espressif products are used in accordance with Espressif's trademark guidelines for educational and reference purposes. Source: Espressif Systems Official Website Arduino � ￼
+
+This project utilizes the Arduino programming framework and development paradigm. Arduino is used under the terms of its respective licenses. Arduino™ and the Arduino logo are trademarks of Arduino AG. Copyright © 2026 Arduino AG. All rights reserved. The Arduino framework is used in accordance with the GNU Lesser General Public License (LGPL) and Creative Commons licensing terms as applicable. Source: Arduino Official Website Technical Documentation Sources Xecor Electronics ESP32 pinout diagrams and technical documentation provided by Xecor Electronics. Source: Xecor ESP32 Pinout Diagram Copyright © 2026 Xecor Co., Ltd. All rights reserved. Technical diagrams used with attribution for educational reference purposes. Micro Robotics ESP32-C3 Super Mini technical specifications and pinout diagrams provided by Micro Robotics. Source: Micro Robotics ESP32-C3-SMINI Documentation Copyright © 2026 Micro Robotics (Pty) Ltd. All rights reserved. Documentation used with attribution for educational and reference purposes. License ESP32 IDE SimTool © 2026 by Matthew Shannon is licensed under Creative Commons Attribution 4.0 International License Summary This work is licensed under the Creative Commons Attribution 4.0 International License. You are free to: Share — copy and redistribute the material in any medium or format Adapt — remix, transform, and build upon the material for any purpose, even commercially Under the following terms: Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits. Full License Text To view a copy of this license, visit: https://creativecommons.org/licenses/by/4.0/legalcode Disclaimer Educational Use This software is provided for educational and learning purposes only. The author and contributors make no warranties regarding the fitness of this software for any particular purpose. Hardware Interaction Users assume all responsibility for the proper and safe operation of hardware when using this software. Always follow proper safety protocols when working with electronic components and embedded systems. Third-Party Resources While every effort has been made to properly attribute third-party resources, users are responsible for ensuring compliance with all applicable licenses and terms of use for any external resources or libraries they choose to incorporate. No Warranty THIS SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. Contributing Contributions to this project are welcome and encouraged. By contributing, you agree that your contributions will be licensed under the same Creative Commons Attribution 4.0 International License that covers this project. Contribution Guidelines When contributing to this repository, please: Maintain Code Quality Ensure all code follows the existing style and conventions Write clear, well-documented code with appropriate comments Testing Include appropriate tests for new functionality Verify that existing functionality is not broken Documentation Update documentation to reflect any changes or new features Include usage examples where applicable Attribution Properly attribute any third-party code or resources Include appropriate copyright notices Pull Requests Submit pull requests with clear, descriptive titles Provide detailed descriptions of changes and their purpose Reference any related issues Support and Contact Issue Reporting For bug reports, feature requests, or technical issues, please open an issue in the GitHub repository. When reporting issues, please include: A clear description of the problem Steps to reproduce the issue Expected vs. actual behavior System information and environment details Relevant code snippets or error messages Community Support GitHub Discussions: For general questions and community interaction Issue Tracker: For bug reports and feature requests Project Maintainer For direct inquiries regarding licensing, collaboration, or other matters, contact the project maintainer through the GitHub profile. Acknowledgments Special thanks to the open-source community and all contributors who have helped make this educational tool possible. This project stands on the shoulders of the Arduino community, Espressif Systems' excellent documentation, and the countless educators and developers who share their knowledge freely. Special Recognition Espressif Systems - For creating the ESP32 platform Arduino Community - For the accessible programming framework Xecor Electronics - For comprehensive pinout documentation Micro Robotics - For ESP32-C3 technical specifications Roadmap Planned Features [ ] Save/Load pin configurations [ ] Export as PlatformIO project [ ] Dark mode interface [ ] More board variants (ESP32-S2, ESP32-H2) [ ] Advanced code templates (interrupts, timers) [ ] Real-time code preview [ ] Pin conflict detection and warnings Version History v2.0 (Current) - Multi-board support, enhanced validation v1.0 - Initial release with ESP32 WROOM support Last Updated: February 2026 Made with ❤️ for the ESP32 Community
+
