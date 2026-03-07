@@ -3,7 +3,7 @@
 ## Project Overview
 This web application provides an interactive interface for configuring ESP-32 microcontroller pins. The tool assists developers in properly setting up their ESP-32 projects by generating boilerplate code based on their pin configuration selections.
 
-## Key Features
+# Key Features
 Visual Pin Selection Interface: Interactive representation of all ESP-32 pins with clear labeling
 
 #  Pin/Board Configuration System:
