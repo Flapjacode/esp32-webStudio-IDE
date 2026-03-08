@@ -113,7 +113,81 @@ The application runs directly in modern browsers:
 ![ESP32 WROOM Pinout](images/esp32-wroom-pinout.png)
 
 
+# Update Notes – ESP32 Simulator
 
+---
+
+## What's New
+
+### Board Selector
+The board dropdown is now organized by chip family. Pick your architecture first, then your specific board variant.
+
+- **ESP32 WROOM** – standard DevKit
+- **ESP32-S3** – includes RGB LED and USB CDC support
+- **ESP32-C3** – DevKit and Super Mini variants
+
+Once you select a board, the **Project Template** dropdown updates automatically to show templates built for that board.
+
+---
+
+### Project Templates
+Each board family now has its own set of ready-to-run `.ino` templates. Select one from the Template dropdown and it loads straight into the code editor.
+
+| Board | Templates |
+|---|---|
+| WROOM | Blink, WiFi Scanner, Analog Read, PWM Fade |
+| S3 | Blink, RGB NeoPixel (GPIO48), USB Serial Echo, PWM Fade |
+| C3 / C3 Mini | Blink, Button Read, PWM Fade, TFT + Buttons (Mini only) |
+
+---
+
+### Flash & Serial Connection
+
+**Flash / Connect** — opens a browser serial port dialog and connects to your ESP32. Once connected, the Terminal tab opens automatically and starts showing live serial output.
+
+**▶ Continue Flash** — this button is disabled until you connect. After connecting, click it to send the code currently in the editor down the serial line to the device.
+
+**Disconnect** — cleanly closes the serial connection from the Terminal tab.
+
+> **Note:** Full firmware flashing requires Arduino IDE or `esptool.py`. The serial connection here is for monitoring and sending commands — Continue Flash sends your code as a serial payload, which works great for scripted or REPL-style workflows.
+
+---
+
+### Output / Terminal Toggle
+The bottom panel now has two tabs.
+
+- **Output** — validation results, status messages, and connection info
+- **Terminal** — live two-way serial console. Type commands and press Enter to send. Incoming data from the ESP32 appears here in real time.
+
+Terminal keyboard shortcuts:
+| Key | Action |
+|---|---|
+| `↑` / `↓` | Browse command history |
+| `Ctrl+L` | Clear the terminal |
+| `Ctrl+C` | Send interrupt signal (0x03) |
+
+---
+
+### Serial Shortcuts Button
+Click **Serial Shortcuts** (or press the shortcuts in the table below) to open a quick-reference panel. You can click any ESP32 command in the panel to paste it directly into the terminal input.
+
+| Shortcut | Action |
+|---|---|
+| `Ctrl+Shift+C` | Connect / open serial port |
+| `Ctrl+Shift+D` | Disconnect serial port |
+| `Ctrl+Shift+F` | Continue Flash (send code) |
+| `Escape` | Close shortcuts panel |
+
+---
+
+### Improved Code Validator
+The validator now checks against the specific board you have selected, not just generic Arduino rules.
+
+- Flags `analogWrite()` usage — not available on any ESP32 (use `ledcWrite()`)
+- Catches OUTPUT mode on input-only pins (e.g. GPIO34/35/36/39 on WROOM)
+- Warns about USB pin conflicts on S3 and C3 boards
+- Reminds you about RISC-V library compatibility on C3 boards
+- Still checks structure, balanced braces, and `.ino` style requirements
 ### Development Setup
 
 1. Clone the repository:
