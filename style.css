@@ -714,3 +714,96 @@ body {
 .pin-button {
     animation: fadeIn 0.3s ease-out;
 }
+
+/* ─── Upload Modal & Tabs ─── */
+.upload-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+    border-bottom: 2px solid #2d3748;
+}
+
+.upload-tab-btn {
+    flex: 1;
+    padding: 10px 12px;
+    background: #2d3748;
+    border: none;
+    color: #718096;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 6px 6px 0 0;
+    transition: all 0.2s ease;
+    font-size: 13px;
+}
+
+.upload-tab-btn:hover {
+    background: #4a5568;
+    color: #cbd5e0;
+}
+
+.upload-tab-btn.active {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.upload-tab-content {
+    display: none;
+}
+
+.upload-tab-content.active {
+    display: block;
+    animation: fadeIn 0.2s ease;
+}
+
+#uploadFileInput {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: 2px dashed #667eea;
+    border-radius: 8px;
+    background: #f7fafc;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 14px;
+}
+
+#uploadFileInput:hover {
+    border-color: #764ba2;
+    background: #edf2f7;
+}
+
+#urlInput {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #667eea;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: 'Monaco', monospace;
+    transition: border-color 0.2s ease;
+}
+
+#urlInput:focus {
+    outline: none;
+    border-color: #764ba2;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.upload-info {
+    margin-top: 10px;
+    padding: 10px 12px;
+    background: #edf2f7;
+    border-left: 3px solid #667eea;
+    border-radius: 4px;
+    font-size: 13px;
+    color: #4a5568;
+}
+
+.btn-upload {
+    background: linear-gradient(135deg, #f093fb, #f5576c);
+    color: white;
+}
+
+.btn-upload:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(245, 87, 108, 0.4);
