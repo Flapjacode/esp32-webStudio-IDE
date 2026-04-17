@@ -63,7 +63,7 @@ void loop() {
                         &#9654; Continue Flash
                     </button>
                     <button class="btn btn-upload" id="uploadBtn" onclick="openUploadDialog()" title="Upload code from file or URL">
-                        Upload Code ⬆️
+                        Upload Code ⬆️ 
                     </button>
                     <button class="btn btn-info" onclick="openShortcutsPanel()" title="Serial/Terminal shortcuts reference">
                         Serial Shortcuts
@@ -142,6 +142,49 @@ void loop() {
         </div>
     </div>
 
+    <div class="modal-overlay" id="uploadModal" onclick="closeUploadModal(event)">
+    <div class="modal-box">
+        <div class="modal-header">
+            <span>⬆️ Upload Code</span>
+            <button class="modal-close" onclick="closeUploadModal()">✕</button>
+        </div>
+        <div class="modal-body">
+            <!-- Tab Buttons -->
+            <div class="upload-tabs">
+                <button class="upload-tab-btn active" onclick="switchUploadTab('file')">📁 File Upload</button>
+                <button class="upload-tab-btn" onclick="switchUploadTab('url')">🔗 Load from URL</button>
+            </div>
+            
+            <!-- File Upload Tab -->
+            <div id="uploadFileTab" class="upload-tab-content active">
+                <div class="input-group">
+                    <label>Select .ino or .cpp file:</label>
+                    <input type="file" id="uploadFileInput" accept=".ino,.cpp,.c,.txt" />
+                </div>
+                <div class="upload-info">
+                    Supports: .ino, .cpp, .c, .txt files
+                </div>
+                <button class="btn btn-success" onclick="loadFromFile()" style="width: 100%; margin-top: 12px;">
+                    Load File
+                </button>
+            </div>
+            
+            <!-- URL Tab -->
+            <div id="uploadUrlTab" class="upload-tab-content">
+                <div class="input-group">
+                    <label>Enter file URL:</label>
+                    <input type="url" id="urlInput" placeholder="https://example.com/sketch.ino" />
+                </div>
+                <div class="upload-info">
+                    Paste a direct link to a .ino or .cpp file (CORS must be enabled)
+                </div>
+                <button class="btn btn-success" onclick="loadFromURL()" style="width: 100%; margin-top: 12px;">
+                    Load from URL
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
     <!-- Load JavaScript -->
     <script src="script.js"></script>
 </body>
