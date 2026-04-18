@@ -158,11 +158,12 @@ void loop() {
             <!-- File Upload Tab -->
             <div id="uploadFileTab" class="upload-tab-content active">
                 <div class="input-group">
-                    <label>Select .ino or .cpp file:</label>
-                    <input type="file" id="uploadFileInput" accept=".ino,.cpp,.c,.txt" />
+                    <label>Select file to upload:</label>
+                    <input type="file" id="uploadFileInput" accept=".ino,.cpp,.c,.txt,.bin" />
                 </div>
                 <div class="upload-info">
-                    Supports: .ino, .cpp, .c, .txt files
+                    📄 Code: .ino, .cpp, .c, .txt<br>
+                    🔧 Binary: .bin (ESP32 firmware)
                 </div>
                 <button class="btn btn-success" onclick="loadFromFile()" style="width: 100%; margin-top: 12px;">
                     Load File

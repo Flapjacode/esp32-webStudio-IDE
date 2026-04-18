@@ -1141,10 +1141,36 @@ async function loadFromFile() {
     }
     
     try {
-        const text = await file.text();
-        document.getElementById('codeEditor').value = text;
-        appendOutput(`<span class="success">✅ Loaded file: ${file.name}\nSize: ${(file.size / 1024).toFixed(2)} KB</span>`);
-        console.log(`✅ File loaded successfully: ${file.name}`);
+        const isBinary = file.name.endsWith('.bin');
+        
+        if (isBinary) {
+            // Handle binary .bin file
+            const arrayBuffer = await file.arrayBuffer();
+            const uint8Array = new Uint8Array(arrayBuffer);
+            
+            // Convert to hex string for display
+            const hexString = Array.from(uint8Array)
+                .map(b => b.toString(16).padStart(2, '0'))
+                .join(' ');
+            
+            // Store binary data globally for potential flashing
+            window.binaryFileData = {
+                name: file.name,
+                size: file.size,
+                data: uint8Array,
+                hex: hexString.substring(0, 500) + (hexString.length > 500 ? '...' : '')
+            };
+            
+            appendOutput(`<span class="success">✅ Binary file loaded: ${file.name}\n📊 Size: ${(file.size / 1024).toFixed(2)} KB\n🔧 Ready for flashing\n\n📝 Hex preview (first 500 chars):\n<code>${window.binaryFileData.hex}</code>\n\n<button class="btn btn-success" onclick="flashBinaryFile()" style="margin-top: 12px; width: 100%;">⚡ Flash Binary to ESP32</button></span>`);
+            console.log(`✅ Binary file loaded: ${file.name}`, window.binaryFileData);
+        } else {
+            // Handle text files
+            const text = await file.text();
+            document.getElementById('codeEditor').value = text;
+            appendOutput(`<span class="success">✅ Code file loaded: ${file.name}\n📊 Size: ${(file.size / 1024).toFixed(2)} KB</span>`);
+            console.log(`✅ Text file loaded successfully: ${file.name}`);
+        }
+        
         closeUploadModal();
         switchTab('output');
     } catch (error) {
@@ -1209,6 +1235,54 @@ async function loadFromURL() {
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && uploadModalOpen) closeUploadModal();
 });
+
+// ─── Flash Binary File ────────────────────────────────────────────
+async function flashBinaryFile() {
+    console.log('⚡ Attempting to flash binary file...');
+    
+    if (!window.binaryFileData) {
+        appendOutput('<span class="error">❌ No binary file loaded. Load a .bin file first.</span>');
+        console.warn('❌ No binary file data');
+        return;
+    }
+    
+    if (!isConnected || !writer) {
+        appendOutput('<span class="error">❌ Not connected to ESP32. Click "Flash / Connect" first.</span>');
+        console.warn('❌ Not connected');
+        return;
+    }
+    
+    try {
+        appendOutput('<span class="info">⏳ Flashing binary file to ESP32...</span>');
+        appendTerminal(`📡 Starting binary flash: ${window.binaryFileData.name} (${window.binaryFileData.size} bytes)`, 'info');
+        
+        const chunk = window.binaryFileData.data;
+        
+        // Send binary data in chunks
+        const chunkSize = 256;
+        let sent = 0;
+        
+        for (let i = 0; i < chunk.length; i += chunkSize) {
+            const slice = chunk.slice(i, i + chunkSize);
+            await writer.write(slice);
+            sent += slice.length;
+            
+            // Update progress
+            const percent = Math.round((sent / chunk.length) * 100);
+            console.log(`📊 Flash progress: ${percent}%`);
+            appendTerminal(`📊 Progress: ${percent}% (${sent}/${chunk.length} bytes)`, 'info');
+        }
+        
+        appendOutput('<span class="success">✅ Binary file transmitted successfully!\\n🎉 Flash complete: ' + window.binaryFileData.name + '</span>');
+        appendTerminal('✅ Binary flash completed successfully!', 'success');
+        console.log('✅ Binary file flashed successfully');
+        
+    } catch (error) {
+        console.error('❌ Error flashing binary:', error);
+        appendOutput(`<span class="error">❌ Error flashing binary file:\\n${error.message}</span>`);
+        appendTerminal(`❌ Flash error: ${error.message}`, 'error');
+    }
+}
 
 // ─── Validator ────────────────────────────────────────────────────
 function validateCode() {
